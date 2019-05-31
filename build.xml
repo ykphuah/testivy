@@ -1,0 +1,17 @@
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="hello-ivy" default="dist">
+	<target name="dist"></target>
+    <!-- =================================
+          target: resolve
+         ================================= -->
+    <target name="resolve" description="--> retrieve dependencies with Ivy">
+        <ivy:retrieve conf="runtime" type="jar"/>
+    </target>
+	
+	<target name="cleanivycache" description="Purge ivy cache">
+		<ivy:cleancache />
+	</target>
+
+	<target name="depend" description="Dependency Tree">
+		<ivy:dependencytree />
+	</target>
+</project>

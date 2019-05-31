@@ -1,0 +1,15 @@
+<ivy-module version="2.0">
+    <info organisation="org.apache" module="hello-ivy"/>
+    <configurations>
+        <conf name="compile" description="Libraries needed only for compilation" />
+        <conf name="runtime" description="Libraries only needed at runtime" extends="compile" />
+        <conf name="test" description="Libraries only needed for testing" extends="runtime" />
+    </configurations>
+    <dependencies>
+<!--
+        <dependency org="org.apache.cxf" name="cxf-rt-ws-security" rev="3.3.2"/> -->
+	<!-- https://mvnrepository.com/artifact/org.apache.wss4j/wss4j-ws-security-dom -->
+	<dependency org="org.apache.wss4j" name="wss4j-ws-security-dom" rev="2.2.3"/> 
+	<!-- <dependency org="org.apache.wss4j" name="wss4j-ws-security-common" rev="2.2.3"/> -->
+    </dependencies>
+</ivy-module>
